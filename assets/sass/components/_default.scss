@@ -1,0 +1,55 @@
+html {
+	min-height: 100%;
+	position: relative;
+}
+
+footer {
+	bottom: 0;
+	position: absolute;
+	width: 100%;
+}
+
+a,
+a:hover {
+	text-decoration: none;
+}
+
+.color-blue {
+	color: $light-blue;
+}
+
+.color-white {
+	color: $white;
+}
+
+.site-link,
+.site-link:hover,
+.menu-link {
+	color: $white;
+}
+
+.section {
+	padding: 5em 0;
+
+	.section-title {
+		color: $light-blue;
+		font-size: 36px;
+		margin-bottom: 20px;
+	}
+
+	.section-description {
+		font-size: 18px;
+	}
+}
+
+ul.list {
+	padding: 0;
+
+	.list-item {
+		list-style: none;
+
+		&.horizontal {
+			display: inline-block;
+		}
+	}
+}

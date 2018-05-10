@@ -1,0 +1,36 @@
+{
+  "name": "robsonportfolio",
+  "version": "1.0.0",
+  "description": "Novo site Robson Portfólio",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robson Oliveira",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^2.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify": "^2.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp.spritesmith": "^6.9.0",
+    "pump": "^3.0.0"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rsoliveira87/robsonportfolio-v3.git"
+  },
+  "keywords": [
+    "robson",
+    "portfólio"
+  ],
+  "bugs": {
+    "url": "https://github.com/rsoliveira87/robsonportfolio-v3/issues"
+  },
+  "homepage": "https://github.com/rsoliveira87/robsonportfolio-v3#readme"
+}

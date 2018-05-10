@@ -1,0 +1,25 @@
+$navigators: ("", "-webkit-", "-moz-", "-o-", "-ms-");
+
+@mixin my-transition( $time ) {
+	@each $navigator in $navigators {
+		#{$navigator}transition: $time all ease-in-out;
+	}
+}
+
+@mixin my-box-shadow( $first, $secound, $third, $color ) {
+	@each $navigator in $navigators {
+		#{$navigator}box-shadow: $first $secound $third $color;
+	}
+}
+
+@mixin my-border-radius( $border_radius ) {
+	@each $navigator in $navigators {
+		#{$navigator}border-radius: $border_radius;
+	}
+}
+
+@mixin my-filter( $type ) {
+	@each $navigator in $navigators {
+		#{$navigator}filter: $type;
+	}
+}

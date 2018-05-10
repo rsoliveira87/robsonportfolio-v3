@@ -1,0 +1,120 @@
+.header-wrapper {
+	background-image: url("../img/bg-workspace.jpg");
+	background-position: center center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	height: 600px;
+	position: relative;
+	z-index: 5;
+
+	&:after {
+	    background: $black-rgba-6;
+	    content: "";
+	    height: 100%;
+	    left: 0;
+		position: absolute;
+	    top: 0;
+	    width: 100%;
+	    z-index: -1;
+	}
+}
+
+.header {
+	padding: 20px 0;
+	@include my-transition(0.3s);
+
+	&.header-fixed {
+		background: $white;
+		box-shadow: 0px 0px 18px 1px $black-rgba-1;
+		-webkit-box-shadow: 0px 0px 18px 1px $black-rgba-1;
+		-moz-box-shadow: 0px 0px 18px 1px $black-rgba-1;
+		-o-box-shadow: 0px 0px 18px 1px $black-rgba-1;
+		-ms-box-shadow: 0px 0px 18px 1px $black-rgba-1;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 100;
+
+		.site-link {
+			color: $black;
+		}
+
+		.navbar-nav {
+			> li {
+				.menu-link {
+					color: $black;
+
+					&:hover {
+						color: $light-blue;
+					}
+				}
+			}
+		}
+	}
+}
+
+.site-logo {
+	font-size: 22px;
+	font-weight: 600;
+	margin-top: 0;
+}
+
+.navbar {
+	min-height: 1px;
+}
+
+.navbar-nav {
+	> li {
+		.menu-link {
+			font-size: 16px;
+			padding: 0 15px;
+			@include my-transition(0.3s);
+
+			&:hover {
+				background: transparent;
+				color: $light-blue;
+			}
+		}
+	}
+}
+
+.home-text {
+	padding: 5em 0;
+
+	.author-name,
+	.author-employment {
+		font-weight: 900;
+	}
+
+	.author-name {
+		font-size: 36px;
+	}
+
+	.author-employment {
+		font-size: 60px;
+		margin: 40px 0 0;
+	}
+}
+
+.btn-download {
+	border: 2px solid $white;
+	display: inline-block;
+	font-size: 16px;
+	padding: 12px 16px;
+	@include my-border-radius(30px);
+	@include my-transition(0.3s);
+
+	&:hover {
+		background: $light-blue;
+		border-color: $light-blue;		
+	}
+
+	.fa {
+		margin-right: 6px;
+	}
+}
+
+.btn-download,
+.btn-download:hover {
+	color: $white;
+}
