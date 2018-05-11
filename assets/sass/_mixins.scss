@@ -6,9 +6,9 @@ $navigators: ("", "-webkit-", "-moz-", "-o-", "-ms-");
 	}
 }
 
-@mixin my-box-shadow( $first, $secound, $third, $color ) {
+@mixin my-box-shadow( $first, $secound, $third, $fourth, $color ) {
 	@each $navigator in $navigators {
-		#{$navigator}box-shadow: $first $secound $third $color;
+		#{$navigator}box-shadow: $first $secound $third $fourth $color;
 	}
 }
 

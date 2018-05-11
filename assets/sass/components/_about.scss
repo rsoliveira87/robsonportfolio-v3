@@ -44,24 +44,25 @@
 		@include my-border-radius(50%);
 		@include my-transition(0.3s);
 
+		&:hover {
+			@include my-box-shadow(0, 0, 0, 6px, $white);
+		}
+
 		&.facebook {
 			&:hover {
 				background: $facebook-color;
-				border-color: $facebook-color;
 			}
 		}
 
 		&.linkedin {
 			&:hover {
 				background: $linkedin-color;
-				border-color: $linkedin-color;
 			}
 		}
 
 		&.github {
 			&:hover {
 				background: $github-color;
-				border-color: $github-color;
 			}
 		}
 
@@ -74,16 +75,25 @@
 }
 
 .skills {
-	.list-item {
-		margin: 0 5px 5px 0;
+	margin: 0;
+
+	.icon-wrapper {
+		border: 1px solid $gray;
+		margin: 0 5px 10px 0;
+		padding: 10px 0;
+		width: 6em;
+
+		&:hover {
+			background: $light-gray;
+		}
 	}
 
 	.icon {
 		background: url('../../assets/img/sprites/skills.png') no-repeat;
 		display: block;
 		height: 48px;
+		margin: 0 auto;
 		width: 48px;
-		@include my-transition(0.3s);
 
 		&.icon-html5 {
 			background-position: -96px 0;
@@ -132,5 +142,9 @@
 		&.icon-wordpress {
 			background-position: -144px -96px;
 		}
+	}
+
+	.icon-name {
+		margin: 5px 0 0;
 	}
 }

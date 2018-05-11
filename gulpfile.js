@@ -22,6 +22,8 @@ var js_file = 'assets/js/*js';
 
 var js_dest = 'assets/js/dist/';
 
+var html_files = ['templates/header.html','templates/about.html','templates/footer.html'];
+
 gulp.task('sassdev', function() {
 
 	return gulp.src(scss_file)
@@ -39,7 +41,7 @@ gulp.task('sassprod', function() {
 
 });
 
-gulp.task('minify_concat_js', function(cb){
+gulp.task('minifyConcatJS', function(cb){
 
 	pump([
 		gulp.src(js_file),
@@ -52,7 +54,15 @@ gulp.task('minify_concat_js', function(cb){
 
 });
 
-gulp.task('generate_sprite', function(){
+gulp.task('concatHtmlFiles', function(){
+
+	return gulp.src(html_files)
+		.pipe(concat('index.html'))
+		.pipe(gulp.dest('./'))
+
+});
+
+gulp.task('sprite', function(){
 
 	var spriteData = gulp.src('assets/img/icons/*.png')
 		.pipe(spritesmith({
@@ -68,8 +78,9 @@ gulp.task('w', function() {
 
 	gulp.watch(scss_file, ['sassdev']);
 	gulp.watch(scss_file, ['sassprod']);
-	gulp.watch(js_file, ['minify_concat_js']);
+	gulp.watch(js_file, ['minifyConcatJS']);
+	gulp.watch(html_files, ['concatHtmlFiles']);
 
 });
 
-gulp.task('default', ['sassdev', 'sassprod', 'minify_concat_js', 'w']);
+gulp.task('default', ['sassdev', 'sassprod', 'minifyConcatJS', 'concatHtmlFiles', 'w']);

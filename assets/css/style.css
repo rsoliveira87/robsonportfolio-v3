@@ -31,9 +31,17 @@ a:hover {
 .section {
   padding: 5em 0; }
   .section .section-title {
-    color: #00bbff;
     font-size: 36px;
-    margin-bottom: 20px; }
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase; }
+    .section .section-title:after {
+      background-color: #00bbff;
+      content: "";
+      display: block;
+      height: 4px;
+      width: 10%;
+      margin: 10px auto; }
   .section .section-description {
     font-size: 18px; }
 
@@ -43,6 +51,34 @@ ul.list {
     list-style: none; }
     ul.list .list-item.horizontal {
       display: inline-block; }
+
+.nav-tabs.custom {
+  background-color: #4271d6;
+  border: none; }
+  .nav-tabs.custom li {
+    margin-bottom: 0; }
+    .nav-tabs.custom li a {
+      background: #4271d6;
+      border: none;
+      border-radius: 0;
+      color: #fff;
+      font-size: 16px;
+      margin-right: 0;
+      padding: 14px 18px; }
+      .nav-tabs.custom li a:hover {
+        border: none; }
+      .nav-tabs.custom li a .fas,
+      .nav-tabs.custom li a .far {
+        font-size: 24px;
+        margin-right: 6px;
+        vertical-align: middle; }
+    .nav-tabs.custom li.active a {
+      background: #00bbff; }
+
+.tab-content.custom {
+  border: 1px solid #4271d6;
+  border-top: none;
+  padding: 10px 10px 0 10px; }
 
 /* 2.0 - Header */
 .header-wrapper {
@@ -72,15 +108,15 @@ ul.list {
   -ms-transition: 0.3s all ease-in-out; }
   .header.header-fixed {
     background: #fff;
-    box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);
-    -o-box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);
-    -ms-box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 100; }
+    z-index: 100;
+    box-shadow: 0 0 18px 1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 0 18px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 18px 1px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 0 18px 1px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 0 18px 1px rgba(0, 0, 0, 0.1); }
     .header.header-fixed .site-link {
       color: #333; }
     .header.header-fixed .navbar-nav > li .menu-link {
@@ -192,56 +228,63 @@ ul.list {
     -moz-transition: 0.3s all ease-in-out;
     -o-transition: 0.3s all ease-in-out;
     -ms-transition: 0.3s all ease-in-out; }
+    .social-media .icon:hover {
+      box-shadow: 0 0 0 6px #fff;
+      -webkit-box-shadow: 0 0 0 6px #fff;
+      -moz-box-shadow: 0 0 0 6px #fff;
+      -o-box-shadow: 0 0 0 6px #fff;
+      -ms-box-shadow: 0 0 0 6px #fff; }
     .social-media .icon.facebook:hover {
-      background: #3d599b;
-      border-color: #3d599b; }
+      background: #3d599b; }
     .social-media .icon.linkedin:hover {
-      background: #0097D3;
-      border-color: #0097D3; }
+      background: #0097D3; }
     .social-media .icon.github:hover {
-      background: #171515;
-      border-color: #171515; }
+      background: #171515; }
     .social-media .icon .fab {
       font-size: 24px;
       line-height: 42px;
       color: #fff; }
 
-.skills .list-item {
-  margin: 0 5px 5px 0; }
-
-.skills .icon {
-  background: url("../../assets/img/sprites/skills.png") no-repeat;
-  display: block;
-  height: 48px;
-  width: 48px;
-  transition: 0.3s all ease-in-out;
-  -webkit-transition: 0.3s all ease-in-out;
-  -moz-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  -ms-transition: 0.3s all ease-in-out; }
-  .skills .icon.icon-html5 {
-    background-position: -96px 0; }
-  .skills .icon.icon-css3 {
-    background-position: 0px -96px; }
-  .skills .icon.icon-less {
-    background-position: -48px -96px; }
-  .skills .icon.icon-sass {
-    background-position: -144px -48px; }
-  .skills .icon.icon-javascript {
-    background-position: -96px -48px; }
-  .skills .icon.icon-jquery {
-    background-position: 0 0; }
-  .skills .icon.icon-node {
-    background-position: -144px 0; }
-  .skills .icon.icon-gulp {
-    background-position: -48px -48px; }
-  .skills .icon.icon-grunt {
-    background-position: 0 -48px; }
-  .skills .icon.icon-bootstrap {
-    background-position: -48px 0; }
-  .skills .icon.icon-materialize {
-    background-position: -96px -96px; }
-  .skills .icon.icon-wordpress {
-    background-position: -144px -96px; }
+.skills {
+  margin: 0; }
+  .skills .icon-wrapper {
+    border: 1px solid #dbdbdb;
+    margin: 0 5px 10px 0;
+    padding: 10px 0;
+    width: 6em; }
+    .skills .icon-wrapper:hover {
+      background: #f0f0f0; }
+  .skills .icon {
+    background: url("../../assets/img/sprites/skills.png") no-repeat;
+    display: block;
+    height: 48px;
+    margin: 0 auto;
+    width: 48px; }
+    .skills .icon.icon-html5 {
+      background-position: -96px 0; }
+    .skills .icon.icon-css3 {
+      background-position: 0px -96px; }
+    .skills .icon.icon-less {
+      background-position: -48px -96px; }
+    .skills .icon.icon-sass {
+      background-position: -144px -48px; }
+    .skills .icon.icon-javascript {
+      background-position: -96px -48px; }
+    .skills .icon.icon-jquery {
+      background-position: 0 0; }
+    .skills .icon.icon-node {
+      background-position: -144px 0; }
+    .skills .icon.icon-gulp {
+      background-position: -48px -48px; }
+    .skills .icon.icon-grunt {
+      background-position: 0 -48px; }
+    .skills .icon.icon-bootstrap {
+      background-position: -48px 0; }
+    .skills .icon.icon-materialize {
+      background-position: -96px -96px; }
+    .skills .icon.icon-wordpress {
+      background-position: -144px -96px; }
+  .skills .icon-name {
+    margin: 5px 0 0; }
 
 /* 4.0 - Footer */

@@ -25,15 +25,11 @@
 
 	&.header-fixed {
 		background: $white;
-		box-shadow: 0px 0px 18px 1px $black-rgba-1;
-		-webkit-box-shadow: 0px 0px 18px 1px $black-rgba-1;
-		-moz-box-shadow: 0px 0px 18px 1px $black-rgba-1;
-		-o-box-shadow: 0px 0px 18px 1px $black-rgba-1;
-		-ms-box-shadow: 0px 0px 18px 1px $black-rgba-1;
 		position: fixed;
 		top: 0;
 		width: 100%;
 		z-index: 100;
+		@include my-box-shadow(0, 0, 18px, 1px, $black-rgba-1)
 
 		.site-link {
 			color: $black;
@@ -106,7 +102,7 @@
 
 	&:hover {
 		background: $light-blue;
-		border-color: $light-blue;		
+		border-color: $light-blue;
 	}
 
 	.fa {
