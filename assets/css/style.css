@@ -52,34 +52,6 @@ ul.list {
     ul.list .list-item.horizontal {
       display: inline-block; }
 
-.nav-tabs.custom {
-  background-color: #4271d6;
-  border: none; }
-  .nav-tabs.custom li {
-    margin-bottom: 0; }
-    .nav-tabs.custom li a {
-      background: #4271d6;
-      border: none;
-      border-radius: 0;
-      color: #fff;
-      font-size: 16px;
-      margin-right: 0;
-      padding: 14px 18px; }
-      .nav-tabs.custom li a:hover {
-        border: none; }
-      .nav-tabs.custom li a .fas,
-      .nav-tabs.custom li a .far {
-        font-size: 24px;
-        margin-right: 6px;
-        vertical-align: middle; }
-    .nav-tabs.custom li.active a {
-      background: #00bbff; }
-
-.tab-content.custom {
-  border: 1px solid #4271d6;
-  border-top: none;
-  padding: 10px 10px 0 10px; }
-
 /* 2.0 - Header */
 .header-wrapper {
   background-image: url("../img/bg-workspace.jpg");
@@ -246,14 +218,41 @@ ul.list {
       color: #fff; }
 
 .skills {
-  margin: 0; }
+  margin: 10px 0; }
   .skills .icon-wrapper {
-    border: 1px solid #dbdbdb;
     margin: 0 5px 10px 0;
     padding: 10px 0;
     width: 6em; }
     .skills .icon-wrapper:hover {
-      background: #f0f0f0; }
+      box-shadow: 0 0 18px 1px rgba(0, 0, 0, 0.1);
+      -webkit-box-shadow: 0 0 18px 1px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0 0 18px 1px rgba(0, 0, 0, 0.1);
+      -o-box-shadow: 0 0 18px 1px rgba(0, 0, 0, 0.1);
+      -ms-box-shadow: 0 0 18px 1px rgba(0, 0, 0, 0.1); }
+      .skills .icon-wrapper:hover .color-html5 {
+        color: #E65100; }
+      .skills .icon-wrapper:hover .color-css3 {
+        color: #0277BD; }
+      .skills .icon-wrapper:hover .color-less {
+        color: #17467D; }
+      .skills .icon-wrapper:hover .color-sass {
+        color: #D889B0; }
+      .skills .icon-wrapper:hover .color-js {
+        color: #D6BA32; }
+      .skills .icon-wrapper:hover .color-jquery {
+        color: #025BA7; }
+      .skills .icon-wrapper:hover .color-node {
+        color: #4C5A62; }
+      .skills .icon-wrapper:hover .color-gulp {
+        color: #D34A47; }
+      .skills .icon-wrapper:hover .color-grunt {
+        color: #FBA919; }
+      .skills .icon-wrapper:hover .color-bootstrap {
+        color: #563D7C; }
+      .skills .icon-wrapper:hover .color-materialize {
+        color: #ED6F75; }
+      .skills .icon-wrapper:hover .color-wordpress {
+        color: #01579B; }
   .skills .icon {
     background: url("../../assets/img/sprites/skills.png") no-repeat;
     display: block;
@@ -285,6 +284,7 @@ ul.list {
     .skills .icon.icon-wordpress {
       background-position: -144px -96px; }
   .skills .icon-name {
+    font-size: 12px;
     margin: 5px 0 0; }
 
 /* 4.0 - Footer */

@@ -2,7 +2,7 @@ var navbar = document.getElementById('top-bar');
 var navTop = navbar.offsetTop;
 
 function stickyNavigation(){
-	if ( window.scrollY > navTop ) {
+	if ( window.scrollY > ( navTop + 100 ) ) {
 		navbar.classList.add('header-fixed');
 	} else {
 		navbar.classList.remove('header-fixed');

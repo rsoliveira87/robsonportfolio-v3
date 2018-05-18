@@ -75,16 +75,21 @@
 }
 
 .skills {
-	margin: 0;
+	margin: 10px 0;
 
 	.icon-wrapper {
-		border: 1px solid $gray;
 		margin: 0 5px 10px 0;
 		padding: 10px 0;
 		width: 6em;
 
 		&:hover {
-			background: $light-gray;
+			@include my-box-shadow(0, 0, 18px, 1px, $black-rgba-1);
+
+			@each $skill, $color in $skills-colors {
+				.color-#{$skill} {
+					color: $color;
+				}
+			}
 		}
 	}
 
@@ -145,6 +150,7 @@
 	}
 
 	.icon-name {
+		font-size: 12px;
 		margin: 5px 0 0;
 	}
 }
