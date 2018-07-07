@@ -44,113 +44,90 @@
 		@include my-border-radius(50%);
 		@include my-transition(0.3s);
 
-		&:hover {
-			@include my-box-shadow(0, 0, 0, 6px, $white);
-		}
-
 		&.facebook {
 			&:hover {
 				background: $facebook-color;
+				border-color: $facebook-color;
 			}
 		}
 
 		&.linkedin {
 			&:hover {
 				background: $linkedin-color;
+				border-color: $linkedin-color;
 			}
 		}
 
 		&.github {
 			&:hover {
 				background: $github-color;
+				border-color: $github-color;
 			}
 		}
 
 		.fab {
+			color: $white;
 			font-size: 24px;
 			line-height: 42px;
-			color: $white;
 		}
 	}
 }
 
-.skills {
-	margin: 10px 0;
 
-	.icon-wrapper {
-		margin: 0 5px 10px 0;
-		padding: 10px 0;
-		width: 6em;
+.icon-box {
+	margin: 15px 0;
+	padding: 10px 0;
+	@include my-box-shadow(0, 0, 30px, 1px, rgba(0, 0, 0, 0.1));
 
-		&:hover {
-			@include my-box-shadow(0, 0, 18px, 1px, $black-rgba-1);
-
-			@each $skill, $color in $skills-colors {
-				.color-#{$skill} {
-					color: $color;
-				}
-			}
-		}
+	.fab {
+		font-size: 60px;
 	}
-
-	.icon {
-		background: url('../../assets/img/sprites/skills.png') no-repeat;
-		display: block;
-		height: 48px;
-		margin: 0 auto;
-		width: 48px;
-
-		&.icon-html5 {
-			background-position: -96px 0;
-		}
-
-		&.icon-css3 {
-			background-position: 0px -96px;
-		}
-
-		&.icon-less {
-			background-position: -48px -96px;
-		}
-
-		&.icon-sass {
-			background-position: -144px -48px;
-		}
-
-		&.icon-javascript {
-			background-position: -96px -48px;
-		}
-
-		&.icon-jquery {
-			background-position: 0 0;
-		}
-
-		&.icon-node {
-			background-position: -144px 0;
-		}
-
-		&.icon-gulp {
-			background-position: -48px -48px;
-		}
-
-		&.icon-grunt {
-			background-position: 0 -48px;
-		}
-
-		&.icon-bootstrap {
-			background-position: -48px 0;
-		}
-
-		&.icon-materialize {
-			background-position: -96px -96px;
-		}
-
-		&.icon-wordpress {
-			background-position: -144px -96px;
-		}
-	}
+	
+	@include my-skills-colors();
 
 	.icon-name {
-		font-size: 12px;
-		margin: 5px 0 0;
+		font-weight: 600;
+		margin: 6px 0 0;
 	}
+}
+
+.timeline-title {
+	background: $light-blue;
+	color: $white;
+	margin-bottom: 20px;
+	padding: 10px;
+
+	.fas {
+		margin-right: 6px;
+	}
+}
+
+.timeline {
+	border-left: 1px solid $gray;
+}
+
+.timeline-item {    
+    padding: 42px 0 20px 25px;
+	position: relative;
+	
+	&:before {
+	    background: $black;
+	    content: '';
+	    display: block;
+	    height: 12px;
+	    left: -6px;
+		position: absolute;
+	    top: 56px;
+	    width: 12px;
+	    @include my-border-radius(50%);
+	}
+}
+
+.timeline-company {
+	font-size: 24px;
+}
+
+.timeline-office {
+	font-size: 18px;
+	font-weight: 500;
 }

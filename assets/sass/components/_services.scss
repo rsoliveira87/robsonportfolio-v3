@@ -1,0 +1,71 @@
+.services-box {
+	border: 2px solid transparent;
+	padding: 20px;
+	margin: 15px 0;
+	@include my-box-shadow(0, 0, 30px, 1px, rgba(0, 0, 0, 0.1));
+	@include my-transition(0.3s);
+
+	&:hover {
+		@include my-transform(scale(1.1));
+	}
+
+	.service-icon {
+		margin-bottom: 20px;
+
+		.fab,
+		.fas {
+			color: $white;
+			display: inline-block;
+			font-size: 72px;
+			height: 2em;
+			line-height: 2em;
+			width: 2em;
+			@include my-border-radius(50%);
+			@include my-gradient-bg(#52A0FD, #00e2fa);
+		}
+	}
+
+	.service-title {
+		font-size: 20px;
+		font-weight: 600px;
+		margin: 20px 0;
+		text-transform: uppercase;
+
+		&:after {
+			background-color: $light-blue;
+			content: "";
+			display: block;
+		    height: 4px;
+		    width: 20%;
+		    margin: 10px auto;
+		}
+	}
+
+	.service-description {
+		font-size: 16px;
+		margin-bottom: 20px;
+	}
+}
+
+.btn-more-details {
+	background: $light-blue;
+    color: $white;
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 60%;
+    @include my-border-radius(20px);
+    @include my-gradient-bg(#52A0FD, #00e2fa);
+    @include my-transition(0.3s);
+
+    .fas {
+    	margin-left: 6px;
+    }
+
+    &:hover {
+    	color: $white;
+    	@include my-transform(scale(1.1));
+    }
+}

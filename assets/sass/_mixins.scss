@@ -1,5 +1,3 @@
-$navigators: ("", "-webkit-", "-moz-", "-o-", "-ms-");
-
 @mixin my-transition( $time ) {
 	@each $navigator in $navigators {
 		#{$navigator}transition: $time all ease-in-out;
@@ -21,5 +19,26 @@ $navigators: ("", "-webkit-", "-moz-", "-o-", "-ms-");
 @mixin my-filter( $type ) {
 	@each $navigator in $navigators {
 		#{$navigator}filter: $type;
+	}
+}
+
+@mixin my-skills-colors(){
+	@each $skill, $color in $skills-colors {
+		.color-#{$skill} {
+			color: $color;
+		}
+	}
+}
+
+@mixin my-gradient-bg( $start-color, $end-color ) {
+    background: $start-color;
+    background: -moz-linear-gradient(left,  $start-color 0%, $end-color 80%,$end-color 100%);
+    background: -webkit-linear-gradient(left,  $start-color 0%, $end-color 80%,$end-color 100%);
+    background: linear-gradient(to right,  $start-color 0%, $end-color 80%,$end-color 100%);
+}
+
+@mixin my-transform( $type ) {
+	@each $navigator in $navigators {
+		#{$navigator}transform: $type;
 	}
 }

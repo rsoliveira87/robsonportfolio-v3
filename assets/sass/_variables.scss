@@ -6,7 +6,7 @@ $red: #e3472f;
 $dark-red: #d63820;
 $gray: #dbdbdb;
 $light-gray-2: #cdcdcd; 
-$light-gray: #f0f0f0;
+$light-gray: #f1f2f3;
 $dark-gray: #a2a2a2;
 $dark-gray-2: #848484;
 $light-blue: #00bbff;
@@ -17,17 +17,12 @@ $orange: #f4973c;
 $facebook-color: #3d599b;
 $linkedin-color: #0097D3;
 $github-color: #171515;
+$navigators: ("", "-webkit-", "-moz-", "-o-", "-ms-");
 $skills-colors: (
 	html5: #E65100,
 	css3: #0277BD,
-	less: #17467D,
 	sass: #D889B0,
 	js: #D6BA32,
-	jquery: #025BA7,
-	node: #4C5A62,
 	gulp: #D34A47,
-	grunt: #FBA919,
-	bootstrap: #563D7C,
-	materialize: #ED6F75,
 	wordpress: #01579B
 );
